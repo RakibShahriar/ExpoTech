@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expo Technologies Ltd — IT, AI & Energy Solutions</title>
+    <meta name="description" content="Expo Technologies Ltd delivers cutting-edge IT, Software, AI, Energy Management, Digital Marketing, R&D, and Market Research solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <span class="loader-text">EXPO</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-icon">⬡</span>
+                <span class="logo-text">EXPO<span class="logo-accent">TECH</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#stats">Impact</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="hero-particles" id="particles"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge" data-animate="fade-up">
+                <span class="badge-dot"></span>
+                Pioneering the Future of Technology
+            </div>
+            <h1 data-animate="fade-up" data-delay="100">
+                Innovation That<br>
+                <span class="gradient-text">Powers Progress</span>
+            </h1>
+            <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
+                Expo Technologies Ltd is a forward-thinking company specializing in IT, Software Development, 
+                Artificial Intelligence, Energy Management, Digital Marketing, R&D, and Market Research — 
+                empowering businesses to thrive in the digital age.
+            </p>
+            <div class="hero-buttons" data-animate="fade-up" data-delay="300">
+                <a href="#services" class="btn btn-primary">
+                    Explore Our Services
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    Get in Touch
+                </a>
+            </div>
+            <div class="hero-scroll" data-animate="fade-up" data-delay="500">
+                <a href="#about" class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Who We Are</span>
+                <h2>Driving Digital<br><span class="gradient-text">Transformation</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content" data-animate="fade-right">
+                    <p class="about-lead">
+                        Expo Technologies Ltd is a multidisciplinary technology company built on the pillars 
+                        of innovation, intelligence, and impact.
+                    </p>
+                    <p>
+                        From designing bespoke software solutions and deploying AI-powered systems, to managing 
+                        smart energy infrastructure and crafting data-driven digital marketing campaigns — we 
+                        operate at the intersection of technology and business growth.
+                    </p>
+                    <p>
+                        Our dedicated R&D and Market Research divisions ensure we stay ahead of industry trends, 
+                        delivering insights and innovations that give our clients a decisive competitive edge.
+                    </p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div>
+                                <h4>Innovation First</h4>
+                                <p>Pushing boundaries with emerging technologies</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fas fa-shield-halved"></i></div>
+                            <div>
+                                <h4>Trusted Partner</h4>
+                                <p>Reliable, transparent, and results-driven</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fas fa-globe"></i></div>
+                            <div>
+                                <h4>Global Vision</h4>
+                                <p>Solutions built for local impact and global scale</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-animate="fade-left">
+                    <div class="about-card-stack">
+                        <div class="about-card card-1">
+                            <i class="fas fa-microchip"></i>
+                            <span>AI & ML</span>
+                        </div>
+                        <div class="about-card card-2">
+                            <i class="fas fa-bolt"></i>
+                            <span>Energy</span>
+                        </div>
+                        <div class="about-card card-3">
+                            <i class="fas fa-code"></i>
+                            <span>Software</span>
+                        </div>
+                        <div class="about-card card-4">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Marketing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">What We Do</span>
+                <h2>Our Core<br><span class="gradient-text">Services</span></h2>
+                <p class="section-desc">End-to-end solutions across technology, energy, and business growth domains.</p>
+            </div>
+            <div class="services-grid">
+                <!-- IT Solutions -->
+                <div class="service-card" data-animate="fade-up" data-delay="0">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>IT Solutions & Infrastructure</h3>
+                    <p>Enterprise-grade IT consulting, cloud migration, cybersecurity, network architecture, and managed IT services tailored to your business needs.</p>
+                    <ul class="service-tags">
+                        <li>Cloud Computing</li>
+                        <li>Cybersecurity</li>
+                        <li>IT Consulting</li>
+                    </ul>
+                </div>
+                <!-- Software Development -->
+                <div class="service-card" data-animate="fade-up" data-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Development</h3>
+                    <p>Custom web, mobile, and enterprise applications built with modern frameworks and agile methodologies — from concept to deployment and beyond.</p>
+                    <ul class="service-tags">
+                        <li>Web Apps</li>
+                        <li>Mobile Apps</li>
+                        <li>SaaS Platforms</li>
+                    </ul>
+                </div>
+                <!-- AI & Machine Learning -->
+                <div class="service-card featured" data-animate="fade-up" data-delay="200">
+                    <div class="service-badge">Leading Edge</div>
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Harnessing the power of AI and machine learning to automate processes, extract insights, and build intelligent systems that transform industries.</p>
+                    <ul class="service-tags">
+                        <li>Machine Learning</li>
+                        <li>NLP & Computer Vision</li>
+                        <li>Predictive Analytics</li>
+                    </ul>
+                </div>
+                <!-- Energy Management -->
+                <div class="service-card" data-animate="fade-up" data-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>Energy Management</h3>
+                    <p>Smart energy solutions including IoT-based monitoring, renewable energy integration, energy auditing, and sustainability consulting for greener operations.</p>
+                    <ul class="service-tags">
+                        <li>Smart Grid</li>
+                        <li>Renewable Energy</li>
+                        <li>IoT Monitoring</li>
+                    </ul>
+                </div>
+                <!-- Digital Marketing -->
+                <div class="service-card" data-animate="fade-up" data-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Data-driven marketing strategies encompassing SEO, SEM, social media, content marketing, email campaigns, and conversion optimization.</p>
+                    <ul class="service-tags">
+                        <li>SEO & SEM</li>
+                        <li>Social Media</li>
+                        <li>Content Strategy</li>
+                    </ul>
+                </div>
+                <!-- R&D and Market Research -->
+                <div class="service-card" data-animate="fade-up" data-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>R&D & Market Research</h3>
+                    <p>Rigorous research and development programs coupled with in-depth market analysis, competitive intelligence, and trend forecasting.</p>
+                    <ul class="service-tags">
+                        <li>Product R&D</li>
+                        <li>Market Analysis</li>
+                        <li>Trend Forecasting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise / Process Section -->
+    <section id="expertise">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">How We Work</span>
+                <h2>Our Proven<br><span class="gradient-text">Process</span></h2>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step" data-animate="fade-up" data-delay="0">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discovery & Research</h3>
+                        <p>We begin by deeply understanding your business, goals, market landscape, and technical requirements through comprehensive research and stakeholder workshops.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-animate="fade-up" data-delay="150">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Strategy & Architecture</h3>
+                        <p>Our experts design a tailored strategy and technical architecture, selecting the right technologies, frameworks, and methodologies for optimal outcomes.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-animate="fade-up" data-delay="300">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Build & Iterate</h3>
+                        <p>Using agile development practices, we build, test, and refine solutions in iterative cycles — ensuring quality, transparency, and alignment at every sprint.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-animate="fade-up" data-delay="450">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Deploy & Scale</h3>
+                        <p>We launch your solution with robust deployment pipelines, provide ongoing support, and continuously optimize for performance, scalability, and growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-animate="fade-up" data-delay="0">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat-card" data-animate="fade-up" data-delay="100">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card" data-animate="fade-up" data-delay="200">
+                    <div class="stat-number" data-count="6">0</div>
+                    <div class="stat-suffix"></div>
+                    <div class="stat-label">Service Verticals</div>
+                </div>
+                <div class="stat-card" data-animate="fade-up" data-delay="300">
+                    <div class="stat-number" data-count="30">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Our Stack</span>
+                <h2>Technologies<br><span class="gradient-text">We Master</span></h2>
+            </div>
+            <div class="tech-marquee" data-animate="fade-up">
+                <div class="tech-track">
+                    <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+                    <div class="tech-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+                    <div class="tech-item"><i class="fab fa-aws"></i><span>AWS</span></div>
+                    <div class="tech-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                    <div class="tech-item"><i class="fab fa-google"></i><span>GCP</span></div>
+                    <div class="tech-item"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+                    <div class="tech-item"><i class="fab fa-flutter"></i><span>Flutter</span></div>
+                    <div class="tech-item"><i class="fas fa-robot"></i><span>TensorFlow</span></div>
+                    <div class="tech-item"><i class="fab fa-microsoft"></i><span>Azure</span></div>
+                    <div class="tech-item"><i class="fab fa-js-square"></i><span>TypeScript</span></div>
+                    <div class="tech-item"><i class="fas fa-fire"></i><span>PyTorch</span></div>
+                    <!-- Duplicated for seamless scroll -->
+                    <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+                    <div class="tech-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+                    <div class="tech-item"><i class="fab fa-aws"></i><span>AWS</span></div>
+                    <div class="tech-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                    <div class="tech-item"><i class="fab fa-google"></i><span>GCP</span></div>
+                    <div class="tech-item"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+                    <div class="tech-item"><i class="fab fa-flutter"></i><span>Flutter</span></div>
+                    <div class="tech-item"><i class="fas fa-robot"></i><span>TensorFlow</span></div>
+                    <div class="tech-item"><i class="fab fa-microsoft"></i><span>Azure</span></div>
+                    <div class="tech-item"><i class="fab fa-js-square"></i><span>TypeScript</span></div>
+                    <div class="tech-item"><i class="fas fa-fire"></i><span>PyTorch</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Our People</span>
+                <h2>Leadership<br><span class="gradient-text">Team</span></h2>
+                <p class="section-desc">Visionary leaders driving innovation across every domain.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card" data-animate="fade-up" data-delay="0">
+                    <div class="team-avatar">
+                        <img src="assets/ceo.webp" alt="Sanjid Shahnoor Syontu - CEO" class="avatar-img">
+                    </div>
+                    <h4>Sanjid Shahnoor Syontu</h4>
+                    <p class="team-role">CEO & Founder</p>
+                    <p class="team-bio">Visionary leader driving Expo Technologies with a passion for innovation in IT, AI, and energy management.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-animate="fade-up" data-delay="100">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder"><i class="fas fa-laptop-code"></i></div>
+                    </div>
+                    <h4>CTO</h4>
+                    <p class="team-role">Chief Technology Officer</p>
+                    <p class="team-bio">Expert in AI, cloud architecture, and scalable software systems.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-animate="fade-up" data-delay="200">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder"><i class="fas fa-chart-pie"></i></div>
+                    </div>
+                    <h4>Head of Marketing</h4>
+                    <p class="team-role">Digital Marketing Director</p>
+                    <p class="team-bio">Growth strategist specializing in data-driven marketing and brand development.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-animate="fade-up" data-delay="300">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder"><i class="fas fa-microscope"></i></div>
+                    </div>
+                    <h4>Head of R&D</h4>
+                    <p class="team-role">Research & Development Lead</p>
+                    <p class="team-bio">Researcher and innovator leading breakthrough projects in AI and energy tech.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-researchgate"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta">
+        <div class="container">
+            <div class="cta-content" data-animate="fade-up">
+                <h2>Ready to Build the<br><span class="gradient-text">Future Together?</span></h2>
+                <p>Let's discuss how Expo Technologies can accelerate your business with innovative technology solutions.</p>
+                <a href="#contact" class="btn btn-primary btn-lg">
+                    Start a Conversation
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Get in Touch</span>
+                <h2>Contact<br><span class="gradient-text">Us</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-animate="fade-right">
+                    <h3>Let's Talk</h3>
+                    <p>Have a project in mind? We'd love to hear about it. Reach out and let's start building something great.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:info@expotech.com">info@expotech.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+                            <div>
+                                <span class="contact-label">Office</span>
+                                <span>Dhaka, Bangladesh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" data-animate="fade-left" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="it">IT Solutions & Infrastructure</option>
+                            <option value="software">Software Development</option>
+                            <option value="ai">Artificial Intelligence</option>
+                            <option value="energy">Energy Management</option>
+                            <option value="marketing">Digital Marketing</option>
+                            <option value="research">R&D & Market Research</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Send Message
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="logo">
+                        <span class="logo-icon">⬡</span>
+                        <span class="logo-text">EXPO<span class="logo-accent">TECH</span></span>
+                    </a>
+                    <p>Empowering businesses through technology, intelligence, and innovation. Your partner in digital transformation.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">IT Solutions</a></li>
+                        <li><a href="#services">Software Development</a></li>
+                        <li><a href="#services">Artificial Intelligence</a></li>
+                        <li><a href="#services">Energy Management</a></li>
+                        <li><a href="#services">Digital Marketing</a></li>
+                        <li><a href="#services">R&D & Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#expertise">Our Process</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for tech insights and company updates.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
+                        <input type="email" placeholder="your@email.com" required>
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Expo Technologies Ltd. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
