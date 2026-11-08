@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 45">
+  <!-- FOX Orange Fox Head Vector -->
+  <polygon points="12,10 24,26 18,28 15,22 10,24" fill="#FF6B35"/>
+  <polygon points="36,10 24,26 30,28 33,22 38,24" fill="#FF6B35"/>
+  <polygon points="24,26 18,28 24,36 30,28" fill="#FF8C42"/>
+  <text x="44" y="27" font-family="'Space Grotesk', -apple-system, sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" letter-spacing="1">FOX</text>
+  <text x="96" y="27" font-family="'Space Grotesk', -apple-system, sans-serif" font-weight="700" font-size="14" fill="#FF6B35">ESS</text>
+  <text x="45" y="38" font-family="'Inter', sans-serif" font-weight="600" font-size="8" fill="#a0a0c0" letter-spacing="1">ENERGY STORAGE</text>
+</svg>
