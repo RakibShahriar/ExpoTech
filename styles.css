@@ -191,6 +191,25 @@ img {
     -webkit-text-fill-color: var(--accent);
 }
 
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+}
+
+#navbar.scrolled .nav-logo-img {
+    height: 36px;
+}
+
+.footer-logo-img {
+    height: 38px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -897,6 +916,12 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+}
+
+.team-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .team-card {
