@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="stylesheet" href="styles.css?v=3.0">
 </head>
 <body>
     <!-- Preloader -->
@@ -400,133 +400,188 @@
                 <p class="section-desc">Strategic alliances with premier technology innovators and leading industrial installations.</p>
             </div>
 
-            <!-- Global Tech & Hardware Partners Slider -->
-            <div class="partners-block" data-animate="fade-up">
-                <div class="slider-header-wrap">
-                    <h3 class="partners-subheading"><i class="fas fa-handshake"></i> Strategic Technology & Equipment Partners</h3>
-                    <div class="slider-nav-arrows">
-                        <button class="slider-btn prev-btn" id="partnerPrev" aria-label="Previous Partner"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next-btn" id="partnerNext" aria-label="Next Partner"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                
-                <div class="slider-track-container" id="partnerSlider">
-                    <div class="slider-track">
-                        <div class="partner-card slide-card">
-                            <div class="partner-card-inner">
-                                <div class="partner-icon-wrap"><i class="fas fa-solar-panel"></i></div>
-                                <div class="partner-info">
-                                    <span class="partner-tag">Tier-1 Solar PV</span>
-                                    <h4>LESSO Solar</h4>
-                                    <p>Official Distribution of Tier-1 Solar PV panels, inverters & high-capacity industrial BESS energy storage solutions.</p>
-                                </div>
+            <!-- Global Tech & Hardware Partners Marquee Slider -->
+            <div class="marquee-block" data-animate="fade-up">
+                <h3 class="marquee-subheading"><i class="fas fa-handshake"></i> Strategic Technology & Equipment Partners</h3>
+                <div class="brand-marquee">
+                    <div class="brand-track">
+                        <div class="brand-badge-item">
+                            <i class="fas fa-solar-panel"></i>
+                            <div class="brand-badge-text">
+                                <strong>LESSO Solar</strong>
+                                <span>Tier-1 Solar Panels & Inverters</span>
                             </div>
                         </div>
-
-                        <div class="partner-card slide-card">
-                            <div class="partner-card-inner">
-                                <div class="partner-icon-wrap"><i class="fas fa-fan"></i></div>
-                                <div class="partner-info">
-                                    <span class="partner-tag">HVAC / VRF Systems</span>
-                                    <h4>ZERO Technology</h4>
-                                    <p>High-efficiency commercial VRF and industrial central HVAC environmental climate control systems.</p>
-                                </div>
+                        <div class="brand-badge-item">
+                            <i class="fas fa-fan"></i>
+                            <div class="brand-badge-text">
+                                <strong>ZERO Technology</strong>
+                                <span>Commercial VRF & Central HVAC</span>
                             </div>
                         </div>
-
-                        <div class="partner-card slide-card">
-                            <div class="partner-card-inner">
-                                <div class="partner-icon-wrap"><i class="fas fa-car-battery"></i></div>
-                                <div class="partner-info">
-                                    <span class="partner-tag">Storage & EV</span>
-                                    <h4>FOX ESS & BYD</h4>
-                                    <p>Next-generation Lithium Energy Storage Systems (BESS) and certified Electric Vehicle charging hardware architecture.</p>
-                                </div>
+                        <div class="brand-badge-item">
+                            <i class="fas fa-car-battery"></i>
+                            <div class="brand-badge-text">
+                                <strong>FOX ESS</strong>
+                                <span>Lithium Energy Storage Systems</span>
                             </div>
                         </div>
-
-                        <div class="partner-card slide-card">
-                            <div class="partner-card-inner">
-                                <div class="partner-icon-wrap"><i class="fas fa-laptop-code"></i></div>
-                                <div class="partner-info">
-                                    <span class="partner-tag">Simulation Engineering</span>
-                                    <h4>PVsyst 7.x</h4>
-                                    <p>Global gold standard software simulation for photovoltaic yield estimation, irradiance loss analysis & 3D shading.</p>
-                                </div>
+                        <div class="brand-badge-item">
+                            <i class="fas fa-charging-station"></i>
+                            <div class="brand-badge-text">
+                                <strong>BYD</strong>
+                                <span>EV Mobility & High-Voltage Charging</span>
                             </div>
                         </div>
-
-                        <div class="partner-card slide-card">
-                            <div class="partner-card-inner">
-                                <div class="partner-icon-wrap"><i class="fas fa-bolt"></i></div>
-                                <div class="partner-info">
-                                    <span class="partner-tag">Energy Technology</span>
-                                    <h4>ITEL Energy</h4>
-                                    <p>Advanced renewable micro-inverters, smart power tracking units and hybrid solar components.</p>
-                                </div>
+                        <div class="brand-badge-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="brand-badge-text">
+                                <strong>PVsyst 7.x</strong>
+                                <span>Yield Simulation Engineering</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item">
+                            <i class="fas fa-bolt"></i>
+                            <div class="brand-badge-text">
+                                <strong>ITEL Energy</strong>
+                                <span>Renewable Micro-Inverters</span>
+                            </div>
+                        </div>
+                        <!-- Duplicate for infinite seamless scroll -->
+                        <div class="brand-badge-item">
+                            <i class="fas fa-solar-panel"></i>
+                            <div class="brand-badge-text">
+                                <strong>LESSO Solar</strong>
+                                <span>Tier-1 Solar Panels & Inverters</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item">
+                            <i class="fas fa-fan"></i>
+                            <div class="brand-badge-text">
+                                <strong>ZERO Technology</strong>
+                                <span>Commercial VRF & Central HVAC</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item">
+                            <i class="fas fa-car-battery"></i>
+                            <div class="brand-badge-text">
+                                <strong>FOX ESS</strong>
+                                <span>Lithium Energy Storage Systems</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item">
+                            <i class="fas fa-charging-station"></i>
+                            <div class="brand-badge-text">
+                                <strong>BYD</strong>
+                                <span>EV Mobility & High-Voltage Charging</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="brand-badge-text">
+                                <strong>PVsyst 7.x</strong>
+                                <span>Yield Simulation Engineering</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item">
+                            <i class="fas fa-bolt"></i>
+                            <div class="brand-badge-text">
+                                <strong>ITEL Energy</strong>
+                                <span>Renewable Micro-Inverters</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Key Industrial Installations & Clients Slider -->
-            <div class="clients-showcase" data-animate="fade-up">
-                <div class="slider-header-wrap">
-                    <h3 class="partners-subheading"><i class="fas fa-building-circle-check"></i> Selected Clients & Landmark Implementations</h3>
-                    <div class="slider-nav-arrows">
-                        <button class="slider-btn prev-btn" id="clientPrev" aria-label="Previous Client"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next-btn" id="clientNext" aria-label="Next Client"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-
-                <div class="slider-track-container" id="clientSlider">
-                    <div class="slider-track">
-                        <div class="client-item slide-card">
-                            <div class="client-item-inner">
-                                <span class="client-badge"><i class="fas fa-certificate"></i> Solar EPC / RMG</span>
-                                <h4>Ayasha & Galeya Fashions Ltd.</h4>
-                                <p>Turnkey rooftop solar PV installation & industrial daytime power load optimization in Gazipur.</p>
+            <!-- Key Industrial Installations & Clients Marquee Slider (reverse direction) -->
+            <div class="marquee-block" data-animate="fade-up">
+                <h3 class="marquee-subheading"><i class="fas fa-building-circle-check"></i> Selected Clients & Landmark Installations</h3>
+                <div class="brand-marquee">
+                    <div class="brand-track brand-track-reverse">
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-industry"></i>
+                            <div class="brand-badge-text">
+                                <strong>Ayasha & Galeya Fashions</strong>
+                                <span>Rooftop Solar EPC (Gazipur)</span>
                             </div>
                         </div>
-
-                        <div class="client-item slide-card">
-                            <div class="client-item-inner">
-                                <span class="client-badge"><i class="fas fa-heart-pulse"></i> Healthcare</span>
-                                <h4>Sheikh Fazilatunnesa Hospital</h4>
-                                <p>Critical medical healthcare facility hybrid clean-energy power deployment in Savar.</p>
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-hospital"></i>
+                            <div class="brand-badge-text">
+                                <strong>Sheikh Fazilatunnesa Hospital</strong>
+                                <span>Hybrid Solar Power (Savar)</span>
                             </div>
                         </div>
-
-                        <div class="client-item slide-card">
-                            <div class="client-item-inner">
-                                <span class="client-badge"><i class="fas fa-graduation-cap"></i> Higher Education</span>
-                                <h4>Varendra University</h4>
-                                <p>Grid-tied institutional solar power station & academic campus smart net-metering project.</p>
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div class="brand-badge-text">
+                                <strong>Varendra University</strong>
+                                <span>Institutional Net-Metering</span>
                             </div>
                         </div>
-
-                        <div class="client-item slide-card">
-                            <div class="client-item-inner">
-                                <span class="client-badge"><i class="fas fa-seedling"></i> Agri-Industrial</span>
-                                <h4>Luskerpore & Amo Tea Estates</h4>
-                                <p>Solar-powered water pumping, irrigation grids and off-grid sustainable plantation power.</p>
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-seedling"></i>
+                            <div class="brand-badge-text">
+                                <strong>Luskerpore & Amo Tea Estates</strong>
+                                <span>Commercial Solar Irrigation</span>
                             </div>
                         </div>
-
-                        <div class="client-item slide-card">
-                            <div class="client-item-inner">
-                                <span class="client-badge"><i class="fas fa-shirt"></i> Global Export RMG</span>
-                                <h4>Export Apparel Manufacturing</h4>
-                                <p>100% biodegradable and compostable packaging & RFID smart trims supplying top global fashion brands.</p>
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-shirt"></i>
+                            <div class="brand-badge-text">
+                                <strong>Export Apparel Manufacturing</strong>
+                                <span>Global Retail RMG Supply</span>
                             </div>
                         </div>
-
-                        <div class="client-item slide-card">
-                            <div class="client-item-inner">
-                                <span class="client-badge"><i class="fas fa-network-wired"></i> National Utility Grid</span>
-                                <h4>BPDB / DPDC / BREB / DESCO</h4>
-                                <p>High-voltage bilateral smart net-metering grid interconnections executed under SREDA standards.</p>
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-network-wired"></i>
+                            <div class="brand-badge-text">
+                                <strong>BPDB / DPDC / BREB / DESCO</strong>
+                                <span>National Smart Net-Metering</span>
+                            </div>
+                        </div>
+                        <!-- Duplicate for infinite seamless scroll -->
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-industry"></i>
+                            <div class="brand-badge-text">
+                                <strong>Ayasha & Galeya Fashions</strong>
+                                <span>Rooftop Solar EPC (Gazipur)</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-hospital"></i>
+                            <div class="brand-badge-text">
+                                <strong>Sheikh Fazilatunnesa Hospital</strong>
+                                <span>Hybrid Solar Power (Savar)</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div class="brand-badge-text">
+                                <strong>Varendra University</strong>
+                                <span>Institutional Net-Metering</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-seedling"></i>
+                            <div class="brand-badge-text">
+                                <strong>Luskerpore & Amo Tea Estates</strong>
+                                <span>Commercial Solar Irrigation</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-shirt"></i>
+                            <div class="brand-badge-text">
+                                <strong>Export Apparel Manufacturing</strong>
+                                <span>Global Retail RMG Supply</span>
+                            </div>
+                        </div>
+                        <div class="brand-badge-item client-badge-card">
+                            <i class="fas fa-network-wired"></i>
+                            <div class="brand-badge-text">
+                                <strong>BPDB / DPDC / BREB / DESCO</strong>
+                                <span>National Smart Net-Metering</span>
                             </div>
                         </div>
                     </div>
