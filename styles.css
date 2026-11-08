@@ -195,7 +195,6 @@ img {
     height: 40px;
     width: auto;
     display: block;
-    filter: brightness(0) invert(1);
     transition: var(--transition);
 }
 
@@ -207,7 +206,6 @@ img {
     height: 38px;
     width: auto;
     display: block;
-    filter: brightness(0) invert(1);
 }
 
 .nav-links {
