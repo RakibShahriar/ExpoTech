@@ -111,28 +111,51 @@ img {
 
 .loader {
     position: relative;
-    width: 80px;
-    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.loader-img-wrap {
+    position: relative;
+    width: 90px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.loader-brand-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    object-fit: contain;
+    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.25);
+    animation: loader-pulse 2s ease-in-out infinite;
+}
+
 .loader-ring {
     position: absolute;
-    inset: 0;
-    border: 3px solid transparent;
+    inset: -6px;
+    border: 3px solid rgba(13, 148, 136, 0.15);
     border-top-color: var(--primary);
     border-right-color: var(--accent);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+    border-radius: 26px;
+    animation: spin 1.8s linear infinite;
+}
+
+@keyframes loader-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
 }
 
 .loader-text {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 3px;
+    font-size: 13px;
+    letter-spacing: 4px;
     color: var(--text-primary);
 }
 
@@ -526,7 +549,7 @@ img {
    ======================================== */
 #about {
     padding: var(--section-padding);
-    background: #ffffff;
+    background: #f8fbfd;
 }
 
 .about-grid {
@@ -649,7 +672,7 @@ img {
    ======================================== */
 #concerns {
     padding: var(--section-padding);
-    background: #f8fbfd;
+    background: #ffffff;
     position: relative;
 }
 
