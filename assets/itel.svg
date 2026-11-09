@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 45">
   <circle cx="16" cy="22" r="12" fill="#E60012"/>
   <text x="11" y="27" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF">i</text>
-  <text x="34" y="28" font-family="'Space Grotesk', -apple-system, sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" letter-spacing="1">itel</text>
+  <text x="34" y="28" font-family="'Space Grotesk', -apple-system, sans-serif" font-weight="800" font-size="24" fill="#0f172a" letter-spacing="1">itel</text>
   <text x="76" y="28" font-family="'Space Grotesk', sans-serif" font-weight="600" font-size="13" fill="#E60012">ENERGY</text>
-  <text x="35" y="39" font-family="'Inter', sans-serif" font-weight="600" font-size="7.5" fill="#a0a0c0" letter-spacing="1">SOLAR TECH</text>
+  <text x="35" y="39" font-family="'Inter', sans-serif" font-weight="600" font-size="7.5" fill="#64748b" letter-spacing="1">SOLAR TECH</text>
 </svg>
-
