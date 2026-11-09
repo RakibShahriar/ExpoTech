@@ -840,6 +840,37 @@ img {
     transition: var(--transition);
     cursor: default;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card with real product image background */
+.partner-bg-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: var(--card-bg);
+}
+
+.brand-badge-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 10, 30, 0.88) 0%, rgba(18, 18, 48, 0.93) 100%);
+    backdrop-filter: blur(2px);
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.brand-badge-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.partner-bg-card:hover .brand-badge-overlay {
+    background: linear-gradient(135deg, rgba(10, 10, 35, 0.75) 0%, rgba(20, 20, 55, 0.82) 100%);
 }
 
 .brand-badge-item:hover {
