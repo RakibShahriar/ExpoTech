@@ -212,6 +212,65 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlider('partnerSlider', 'partnerPrev', 'partnerNext');
     initSlider('clientSlider', 'clientPrev', 'clientNext');
 
+    // ---- Ventures Photo Lightbox ----
+    const ventureItems = Array.from(document.querySelectorAll('.venture-item'));
+    const lightbox = document.getElementById('lightbox');
+
+    if (lightbox && ventureItems.length) {
+        const lbImg = lightbox.querySelector('.lightbox-img');
+        const lbTitle = lightbox.querySelector('.lightbox-title');
+        const lbDesc = lightbox.querySelector('.lightbox-desc');
+        const lbClose = lightbox.querySelector('.lightbox-close');
+        let currentIndex = 0;
+        let lastFocused = null;
+
+        const showPhoto = (index) => {
+            currentIndex = (index + ventureItems.length) % ventureItems.length;
+            const item = ventureItems[currentIndex];
+            const img = item.querySelector('img');
+            lbImg.src = img.getAttribute('src');
+            lbImg.alt = img.alt;
+            lbTitle.textContent = item.querySelector('.venture-title').textContent;
+            lbDesc.textContent = item.querySelector('.venture-desc').textContent;
+        };
+
+        const openLightbox = (index) => {
+            lastFocused = document.activeElement;
+            showPhoto(index);
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            lbClose.focus();
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            if (lastFocused) lastFocused.focus();
+        };
+
+        ventureItems.forEach((item, i) => {
+            item.addEventListener('click', () => openLightbox(i));
+        });
+
+        lbClose.addEventListener('click', closeLightbox);
+        lightbox.querySelector('.lightbox-prev').addEventListener('click', () => showPhoto(currentIndex - 1));
+        lightbox.querySelector('.lightbox-next').addEventListener('click', () => showPhoto(currentIndex + 1));
+
+        // Close when clicking the dark backdrop
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('open')) return;
+            if (e.key === 'Escape') closeLightbox();
+            else if (e.key === 'ArrowLeft') showPhoto(currentIndex - 1);
+            else if (e.key === 'ArrowRight') showPhoto(currentIndex + 1);
+        });
+    }
+
     // ---- Smooth scroll for all anchor links ----
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

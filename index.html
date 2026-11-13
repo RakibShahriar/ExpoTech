@@ -11,7 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=12.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Expo Technologies Limited — IT, AI & Energy Solutions">
+    <meta property="og:description" content="A Livenza Group concern delivering IT, Software, AI, Energy Management, Digital Marketing, R&D and Market Research across Bangladesh, Hong Kong and Canada.">
+    <meta property="og:image" content="assets/venture-graduation.jpg">
+    <link rel="stylesheet" href="styles.css?v=13.0">
 </head>
 <body>
     <!-- Preloader -->
@@ -35,6 +39,7 @@
                 <li><a href="#hero" class="active">Home</a></li>
                 <li><a href="#partners">Partners</a></li>
                 <li><a href="#concerns">Sister Concerns</a></li>
+                <li><a href="#ventures">Ventures</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#expertise">Expertise</a></li>
@@ -54,27 +59,79 @@
             <div class="hero-particles" id="particles"></div>
             <div class="hero-gradient"></div>
         </div>
-        <div class="hero-content">
-            <h1 data-animate="fade-up" data-delay="100">
-                Innovation That<br>
-                <span class="gradient-text">Powers Progress</span>
-            </h1>
-            <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
-                Expo Technologies Limited is a sustainability-driven technology company and a proud concern of 
-                <strong>Livenza Group</strong> — specializing in IT, Software Development, Artificial Intelligence, 
-                Energy Management, Digital Marketing, R&D, and Market Research across Bangladesh, Hong Kong, and Canada.
-            </p>
-            <div class="hero-buttons" data-animate="fade-up" data-delay="300">
-                <a href="#services" class="btn btn-primary">
-                    Explore Our Services
-                    <i class="fas fa-arrow-right"></i>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1 data-animate="fade-up" data-delay="100">
+                    Innovation That<br>
+                    <span class="gradient-text">Powers Progress</span>
+                </h1>
+                <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
+                    Expo Technologies Limited is a sustainability-driven technology company and a proud concern of
+                    <strong>Livenza Group</strong> — specializing in IT, Software Development, Artificial Intelligence,
+                    Energy Management, Digital Marketing, R&D, and Market Research across Bangladesh, Hong Kong, and Canada.
+                </p>
+                <div class="hero-buttons" data-animate="fade-up" data-delay="300">
+                    <a href="#services" class="btn btn-primary">
+                        Explore Our Services
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        Get in Touch
+                    </a>
+                </div>
+                <a href="#ventures" class="hero-proof-link" data-animate="fade-up" data-delay="400">
+                    <span class="hero-proof-thumbs">
+                        <img src="assets/venture-graduation.jpg" alt="">
+                        <img src="assets/venture-mou-signing.jpg" alt="">
+                        <img src="assets/venture-team-celebration.jpg" alt="">
+                    </span>
+                    <span>See our ventures in action <i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="#contact" class="btn btn-outline">
-                    Get in Touch
-                </a>
+            </div>
+
+            <div class="hero-visual" data-animate="fade-left" data-delay="200">
+                <figure class="hero-photo hero-photo-main">
+                    <img src="assets/venture-lesso-partnership.jpg" alt="Partnership agreement exchange at LESSO" width="486" height="610">
+                </figure>
+                <figure class="hero-photo hero-photo-top">
+                    <img src="assets/venture-training-labs.jpg" alt="Hands-on solar and energy lab training sessions" width="805" height="540">
+                </figure>
+                <figure class="hero-photo hero-photo-bottom">
+                    <img src="assets/venture-mou-signing.jpg" alt="MoU signing ceremony with industry and academic partners" width="491" height="609">
+                </figure>
+                <div class="hero-chip hero-chip-a">
+                    <i class="fas fa-handshake"></i>
+                    <div><strong>LESSO Partnership</strong><span>Tier-1 solar technology</span></div>
+                </div>
+                <div class="hero-chip hero-chip-b">
+                    <i class="fas fa-file-signature"></i>
+                    <div><strong>Strategic MoUs</strong><span>Industry &amp; academia</span></div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Credentials Bar -->
+    <div class="credentials-bar">
+        <div class="container credentials-grid">
+            <div class="credential" data-animate="fade-up" data-delay="0">
+                <div class="credential-icon"><i class="fas fa-solar-panel"></i></div>
+                <div><strong>Official LESSO Partner</strong><span>Via Greenery Energy Solution Ltd.</span></div>
+            </div>
+            <div class="credential" data-animate="fade-up" data-delay="100">
+                <div class="credential-icon"><i class="fas fa-leaf"></i></div>
+                <div><strong>LEED Platinum Group</strong><span>Certified green-factory concern</span></div>
+            </div>
+            <div class="credential" data-animate="fade-up" data-delay="200">
+                <div class="credential-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div><strong>Industry–Academia MoUs</strong><span>Solar, BESS &amp; EV skills training</span></div>
+            </div>
+            <div class="credential" data-animate="fade-up" data-delay="300">
+                <div class="credential-icon"><i class="fas fa-earth-asia"></i></div>
+                <div><strong>3 Countries</strong><span>Bangladesh · Hong Kong · Canada</span></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Partners & Clients Section -->
     <section id="partners">
@@ -458,6 +515,80 @@
         </div>
     </section>
 
+    <!-- Ventures in Action (Photo Gallery) -->
+    <section id="ventures">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Ventures in Action</span>
+                <h2>Real People.<br><span class="gradient-text">Real Impact.</span></h2>
+                <p class="section-desc">Moments from across the Livenza Group ecosystem — global technology partnerships, industry–academia alliances, hands-on technical training, and the team that makes it happen.</p>
+            </div>
+
+            <div class="ventures-grid">
+                <button type="button" class="venture-item v-feature" data-animate="fade-up" data-delay="0">
+                    <img src="assets/venture-graduation.jpg" alt="Graduates in caps and gowns at the Greenery Institute graduation ceremony" loading="lazy" width="1600" height="1066">
+                    <span class="venture-zoom" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                    <span class="venture-caption">
+                        <span class="venture-tag"><i class="fas fa-graduation-cap"></i> Greenery Institute</span>
+                        <span class="venture-title">Graduation Day</span>
+                        <span class="venture-desc">Graduates of our technical training programmes celebrating the completion of their solar PV, BESS and EV engineering journey.</span>
+                    </span>
+                </button>
+
+                <button type="button" class="venture-item v-tall" data-animate="fade-up" data-delay="100">
+                    <img src="assets/venture-lesso-partnership.jpg" alt="Handshake and agreement exchange in front of the LESSO brand wall" loading="lazy" width="486" height="610" style="object-position: center 40%;">
+                    <span class="venture-zoom" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                    <span class="venture-caption">
+                        <span class="venture-tag"><i class="fas fa-handshake"></i> Global Partnership</span>
+                        <span class="venture-title">Partnership with LESSO</span>
+                        <span class="venture-desc">Agreement exchange with LESSO — our Tier-1 solar panel and inverter technology partner.</span>
+                    </span>
+                </button>
+
+                <button type="button" class="venture-item v-tall" data-animate="fade-up" data-delay="200">
+                    <img src="assets/venture-mou-signing.jpg" alt="MoU signing ceremony with partners holding signed agreements" loading="lazy" width="491" height="609" style="object-position: center 45%;">
+                    <span class="venture-zoom" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                    <span class="venture-caption">
+                        <span class="venture-tag"><i class="fas fa-file-signature"></i> Industry &amp; Academia</span>
+                        <span class="venture-title">MoU Signing Ceremony</span>
+                        <span class="venture-desc">Formalising collaboration with Daffodil and industry partners to build clean-energy skills and projects.</span>
+                    </span>
+                </button>
+
+                <button type="button" class="venture-item v-wide" data-animate="fade-up" data-delay="100">
+                    <img src="assets/venture-training-labs.jpg" alt="Engineers in hands-on solar lab and rooftop site training sessions" loading="lazy" width="805" height="540">
+                    <span class="venture-zoom" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                    <span class="venture-caption">
+                        <span class="venture-tag"><i class="fas fa-screwdriver-wrench"></i> Hands-on Training</span>
+                        <span class="venture-title">Solar &amp; Energy Labs</span>
+                        <span class="venture-desc">Practical PV, inverter, protection-panel and rooftop site sessions for engineers and technicians.</span>
+                    </span>
+                </button>
+
+                <button type="button" class="venture-item v-wide" data-animate="fade-up" data-delay="200">
+                    <img src="assets/venture-team-celebration.jpg" alt="Team members cutting a cake to celebrate a company milestone" loading="lazy" width="499" height="621" style="object-position: center 30%;">
+                    <span class="venture-zoom" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                    <span class="venture-caption">
+                        <span class="venture-tag"><i class="fas fa-champagne-glasses"></i> Our Culture</span>
+                        <span class="venture-title">Celebrating Milestones</span>
+                        <span class="venture-desc">Our team marking another milestone together — growth built by people who care.</span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="ventures-cta" data-animate="fade-up">
+                <div>
+                    <strong>Partner, train or build with the Livenza Group ecosystem.</strong>
+                    <p>From Tier-1 clean-energy hardware to skilled engineers and intelligent software — one connected team delivers it end to end.</p>
+                </div>
+                <a href="#contact" class="btn btn-primary">
+                    Partner With Us
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about">
         <div class="container">
@@ -507,6 +638,9 @@
                 </div>
                 <div class="about-visual" data-animate="fade-left">
                     <div class="about-card-stack">
+                        <figure class="about-photo-frame">
+                            <img src="assets/venture-team-celebration.jpg" alt="The Expo Technologies team celebrating a company milestone" class="about-photo" loading="lazy" width="499" height="621">
+                        </figure>
                         <div class="about-card card-1">
                             <i class="fas fa-microchip"></i>
                             <span>AI & ML</span>
@@ -686,6 +820,7 @@
                     <div class="stat-label">Team Members</div>
                 </div>
             </div>
+            <p class="stats-caption"><i class="fas fa-camera"></i> Pictured: Greenery Institute graduation ceremony</p>
         </div>
     </section>
 
@@ -903,6 +1038,7 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#concerns">Sister Concerns</a></li>
                         <li><a href="#partners">Partners & Clients</a></li>
+                        <li><a href="#ventures">Ventures in Action</a></li>
                         <li><a href="#expertise">Our Process</a></li>
                         <li><a href="#team">Team</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -927,12 +1063,26 @@
         </div>
     </footer>
 
+    <!-- Photo Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+        <button type="button" class="lightbox-close" aria-label="Close photo"><i class="fas fa-xmark"></i></button>
+        <button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+        <figure class="lightbox-figure">
+            <img class="lightbox-img" alt="">
+            <figcaption>
+                <strong class="lightbox-title"></strong>
+                <span class="lightbox-desc"></span>
+            </figcaption>
+        </figure>
+        <button type="button" class="lightbox-nav lightbox-next" aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
     <!-- Back to Top -->
     <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to Top">
         <i class="fas fa-chevron-up"></i>
     </a>
 
-    <script src="script.js?v=2.0"></script>
+    <script src="script.js?v=3.0"></script>
 </body>
 </html>
 
