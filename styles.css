@@ -51,6 +51,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -59,7 +61,30 @@ body {
     color: var(--text-primary);
     line-height: 1.7;
     overflow-x: hidden;
+    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(13, 148, 136, 0.12);
+}
+
+body.nav-open {
+    overflow: hidden;
+}
+
+/* Dim backdrop behind the mobile navigation drawer */
+.nav-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(15, 23, 42, 0.38);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-backdrop.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 a {
@@ -2110,6 +2135,24 @@ img {
     color: #ffffff;
 }
 
+/* Gradient text & button need light treatment on the blue CTA background */
+#cta .gradient-text {
+    background: linear-gradient(135deg, #ffffff 0%, #bae6fd 45%, #5eead4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#cta .btn-primary {
+    background: #ffffff;
+    color: var(--primary-dark);
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.25);
+}
+
+#cta .btn-primary:hover {
+    background: #f0fdfa;
+    box-shadow: 0 12px 36px rgba(15, 23, 42, 0.32);
+}
+
 .cta-content p {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.9);
@@ -2466,6 +2509,52 @@ img {
 }
 
 /* ========================================
+   TOUCH & MOTION PREFERENCES
+   ======================================== */
+/* Touch screens: stop hover lifts from "sticking" after a tap */
+@media (hover: none) {
+    .service-card:hover,
+    .concern-card:hover,
+    .team-card:hover,
+    .partner-square-card:hover,
+    .btn-primary:hover,
+    .btn-outline:hover {
+        transform: none;
+    }
+
+    .partner-square-card:hover .partner-square-img,
+    .partner-square-card:hover .client-square-img,
+    .hero-photo:hover img {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .brand-track,
+    .brand-track-reverse,
+    .tech-track {
+        animation: none !important;
+    }
+
+    [data-animate] {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ========================================
    RESPONSIVE
    ======================================== */
 @media (max-width: 1240px) {
@@ -2482,20 +2571,29 @@ img {
     .nav-toggle {
         display: flex;
         z-index: 1001;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin-right: -10px;
     }
 
     .nav-links {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 280px;
+        width: min(300px, 84vw);
         height: 100vh;
+        height: 100dvh;
+        overflow-y: auto;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(25px);
         flex-direction: column;
+        align-items: stretch;
         justify-content: center;
-        gap: 20px;
-        padding: 30px;
+        gap: 4px;
+        padding: 80px 28px 30px;
         transition: var(--transition-slow);
         border-left: 1px solid rgba(13, 148, 136, 0.2);
         box-shadow: -10px 0 30px rgba(15, 23, 42, 0.08);
@@ -2506,8 +2604,19 @@ img {
     }
 
     .nav-links a {
+        display: block;
+        padding: 11px 14px;
+        border-radius: 10px;
         font-size: 16px;
         color: #0f172a;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-links a.active {
+        background: rgba(13, 148, 136, 0.1);
     }
 
     .nav-links a:hover,
@@ -2722,9 +2831,20 @@ img {
         margin-bottom: 70px;
     }
 
-    /* Stats */
+    /* Stats — lighter background image on small screens */
     #stats {
         padding: 64px 0 28px;
+        background:
+            linear-gradient(135deg, rgba(11, 21, 48, 0.9) 0%, rgba(30, 58, 138, 0.82) 55%, rgba(13, 148, 136, 0.78) 100%),
+            url('assets/venture-graduation-800.jpg') center 35% / cover no-repeat;
+    }
+
+    /* 16px+ inputs stop iOS Safari from zooming in on focus */
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    .newsletter-form input {
+        font-size: 16px;
     }
 
     #hero h1 {
@@ -2747,7 +2867,7 @@ img {
 
     .hero-buttons {
         gap: 12px;
-        margin-bottom: 36px;
+        margin-bottom: 0;
     }
 
     .hero-scroll {
@@ -2996,6 +3116,7 @@ img {
 
     .contact-item {
         gap: 12px;
+        align-items: flex-start;
     }
 
     .contact-icon {
@@ -3039,10 +3160,34 @@ img {
         font-size: 13px;
     }
     
-    /* Footer */
+    /* Footer — link lists side by side, brand & newsletter full width */
+    #footer {
+        padding-top: 56px;
+    }
+
     .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 20px;
+        padding-bottom: 36px;
+    }
+
+    .footer-brand,
+    .footer-newsletter {
+        grid-column: 1 / -1;
+    }
+
+    .footer-links h4,
+    .footer-newsletter h4 {
+        margin-bottom: 14px;
+    }
+
+    .footer-links ul {
+        gap: 4px;
+    }
+
+    .footer-links a {
+        display: inline-block;
+        padding: 5px 0;
     }
 
     .footer-logo-img {
@@ -3071,12 +3216,25 @@ img {
     }
 
     .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
     .stat-card {
-        padding: 16px;
+        padding: 14px 6px;
+    }
+
+    .stat-number {
+        font-size: 34px;
+    }
+
+    .stats-caption {
+        margin-top: 24px;
+        font-size: 11px;
+    }
+
+    .hero-inner {
+        padding-top: 104px;
     }
 
     .about-card-stack {
@@ -3136,28 +3294,73 @@ img {
         gap: 16px;
     }
 
-    /* Ventures */
+    /* Ventures — compact 2-column mosaic (full captions open in the lightbox) */
     .ventures-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 230px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
+        gap: 10px;
+    }
+
+    .v-feature,
+    .v-wide {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .v-tall {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .venture-item {
+        border-radius: 16px;
     }
 
     .ventures-grid .venture-desc {
         display: none;
     }
 
-    .ventures-grid .v-tall .venture-desc {
-        display: block;
+    .venture-caption {
+        padding: 12px;
     }
 
-    .v-feature,
-    .v-wide {
-        grid-column: auto;
-        grid-row: auto;
+    .venture-tag {
+        font-size: 9.5px;
+        padding: 3px 8px;
+        margin-bottom: 4px;
+        letter-spacing: 0.4px;
     }
 
-    .v-feature {
-        grid-row: span 1;
+    .venture-title {
+        font-size: 15px;
+    }
+
+    .v-feature .venture-title {
+        font-size: 19px;
+    }
+
+    .v-tall .venture-title {
+        font-size: 14px;
+    }
+
+    /* Half-width cards: keep the tag on one line */
+    .v-tall .venture-tag {
+        white-space: nowrap;
+        font-size: 9px;
+        letter-spacing: 0.2px;
+        padding: 3px 7px;
+    }
+
+    .v-tall .venture-tag i {
+        display: none;
+    }
+
+    .venture-zoom {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
     }
 
     .ventures-cta .btn {

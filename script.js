@@ -3,6 +3,9 @@
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // ---- Preloader ----
     const preloader = document.getElementById('preloader');
     window.addEventListener('load', () => {
@@ -18,8 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---- Particle Background ----
     const particlesContainer = document.getElementById('particles');
+    // Fewer particles on phones (battery/GPU), none when the user prefers reduced motion
+    const particleCount = prefersReducedMotion ? 0 : (isMobile ? 18 : 50);
     if (particlesContainer) {
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('div');
             particle.classList.add('particle');
             particle.style.left = Math.random() * 100 + '%';
@@ -40,24 +45,41 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
 
     // ---- Mobile Navigation ----
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
+    const navBackdrop = document.getElementById('navBackdrop');
+
+    const setNavOpen = (open) => {
+        navToggle.classList.toggle('active', open);
+        navLinks.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.classList.toggle('nav-open', open);
+        if (navBackdrop) navBackdrop.classList.toggle('visible', open);
+    };
 
     navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        navLinks.classList.toggle('open');
+        setNavOpen(!navLinks.classList.contains('open'));
     });
 
-    // Close mobile nav on link click
+    // Close mobile nav on link click, backdrop tap, Escape, or resize to desktop
     navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            navLinks.classList.remove('open');
-        });
+        link.addEventListener('click', () => setNavOpen(false));
+    });
+
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', () => setNavOpen(false));
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) setNavOpen(false);
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1100 && navLinks.classList.contains('open')) setNavOpen(false);
     });
 
     // ---- Active Nav Link on Scroll ----
@@ -81,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
-    window.addEventListener('scroll', setActiveNav);
+    window.addEventListener('scroll', setActiveNav, { passive: true });
 
     // ---- Scroll Animations (Intersection Observer) ----
     const animatedElements = document.querySelectorAll('[data-animate]');
@@ -89,10 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const delay = entry.target.getAttribute('data-delay') || 0;
+                // On phones items enter one at a time, so long staggers just feel slow
+                const rawDelay = parseInt(entry.target.getAttribute('data-delay') || 0, 10);
+                const delay = isMobile ? Math.min(rawDelay, 120) : rawDelay;
                 setTimeout(() => {
                     entry.target.classList.add('animated');
-                }, parseInt(delay));
+                }, delay);
                 observer.unobserve(entry.target);
             }
         });
@@ -141,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             backToTop.classList.remove('visible');
         }
-    });
+    }, { passive: true });
 
     // ---- Contact Form Handler ----
     const contactForm = document.getElementById('contactForm');
@@ -262,6 +286,21 @@ document.addEventListener('DOMContentLoaded', () => {
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) closeLightbox();
         });
+
+        // Swipe left/right to change photo on touch screens
+        let touchStartX = 0;
+        let touchStartY = 0;
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].clientX;
+            touchStartY = e.changedTouches[0].clientY;
+        }, { passive: true });
+        lightbox.addEventListener('touchend', (e) => {
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            const dy = e.changedTouches[0].clientY - touchStartY;
+            if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+                showPhoto(currentIndex + (dx < 0 ? 1 : -1));
+            }
+        }, { passive: true });
 
         document.addEventListener('keydown', (e) => {
             if (!lightbox.classList.contains('open')) return;
